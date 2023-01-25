@@ -1,0 +1,421 @@
+/* CSS RESET */
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--), Arial, Helvetica, sans-serif;
+}
+
+/* ROOT */
+:root {
+    --vid-geel: #FFE69F;
+    --vid-oranje: #F7B185;
+    --vid-blauw: #9AC2E3;
+    --vid-roze: #F6CCCC;
+    --vid-groen: #C3E1B5;
+    --vid-paars: #B5A7D4;
+    --vid-donkergrijs: #B7B7B7;
+    --vid-lichtgrijs: #CCCCCC;
+}
+
+footer {
+    height: 10em;
+}
+
+html .typografie,
+html .gridkleur,
+html .webtypografie,
+html .interfaceinteractie,
+html .interfacebeweging,
+html .beeldtaal,
+html .meesterproef {
+    display: table;
+    margin: auto;
+}
+
+.typografie,
+.gridkleur,
+.webtypografie,
+.interfaceinteractie,
+.interfacebeweging,
+.beeldtaal,
+.meesterproef {
+    max-width: 100em;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+h1 {
+    font-size: 3.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.home-toptext {
+    margin: 10em 10em 0 10em;
+}
+
+.home-toptext p {
+    font-size: 1.1em;
+}
+
+.vid-eerste {
+   display: flex;
+   flex-direction: column; 
+}
+
+.vid-geel {
+    background-color: var(--vid-geel);
+}
+
+.vid-oranje {
+    background-color: var(--vid-oranje);
+}
+
+.vid-blauw {
+    background-color: var(--vid-blauw);
+}
+
+.vid-roze {
+    background-color: var(--vid-roze);
+}
+
+.vid-groen {
+    background-color: var(--vid-groen);
+}
+
+.vid-paars {
+    background-color: var(--vid-paars);
+}
+
+.vid-grijs {
+    background: rgb(183,183,183);
+    background: linear-gradient(180deg, rgba(183,183,183,1) 70%, rgba(204,204,204,1) 70%);
+}
+
+.vid-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr) 3fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    height: 18em;
+    margin: 5em 10em 0 10em;
+    }
+
+.vid-geel:hover + .vid-geel-onder {
+    display: block;
+}
+
+.vid-oranje:hover + .vid-oranje-onder {
+    display: block;
+}
+
+.vid-blauw:hover + .vid-blauw-onder {
+    display: block;
+}
+
+.vid-roze:hover + .vid-roze-onder {
+    display: block;
+}
+
+.vid-groen:hover + .vid-groen-onder {
+    display: block;
+}
+
+.vid-paars:hover + .vid-paars-onder {
+    display: block;
+}
+
+.vid-grijs:hover + .vid-grijs-onder {
+    display: block;
+}
+    
+.vid-geel { grid-area: 1 / 1 / 2 / 2; }
+.vid-oranje { grid-area: 2 / 1 / 3 / 2; }
+.vid-blauw { grid-area: 1 / 2 / 3 / 3; }
+.vid-roze { grid-area: 1 / 3 / 3 / 4; }
+.vid-groen { grid-area: 1 / 4 / 3 / 5; }
+.vid-paars { grid-area: 1 / 5 / 3 / 6; }
+.vid-grijs { grid-area: 1 / 6 / 3 / 7; }
+.vid-container > div { grid-area: 3 / 1 / 4 / 7; }
+
+.vid-container > div div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5em;
+}
+
+.vid-container h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+}
+
+.vid-container span {
+    display: block;
+    height: 1em;
+    background-color: red;
+    margin-bottom: 5px;
+}
+
+.vid-geel-onder span {
+    background-color: var(--vid-geel);
+}
+
+.vid-oranje-onder span {
+    background-color: var(--vid-oranje);
+}
+
+.vid-blauw-onder span {
+    background-color: var(--vid-blauw);
+}
+
+.vid-roze-onder span {
+    background-color: var(--vid-roze);
+}
+
+.vid-groen-onder span {
+    background-color: var(--vid-groen);
+}
+
+.vid-paars-onder span {
+    background-color: var(--vid-paars);
+}
+
+.vid-grijs-onder span {
+    background: rgb(183,183,183);
+}
+
+.vid-geel-onder,
+.vid-oranje-onder,
+.vid-blauw-onder,
+.vid-roze-onder,
+.vid-groen-onder,
+.vid-paars-onder,
+.vid-grijs-onder {
+    display: none;
+}
+
+main > span {
+    position: absolute;
+    border: 3px dashed #7BD0FF;
+    font-size: 3em;
+    right: 10rem;
+    padding: .3em;
+    transform: rotate(-25deg);
+    color: #7BD0FF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+header {
+    margin-top: 5em;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header > h1 {
+    margin-bottom: 1rem;
+}
+
+header p {
+    margin-bottom: 1rem;
+}
+
+header span {
+    display: block;
+    height: 1em;
+    left: 0;
+    right: 0;
+}
+
+h3 {
+    font-size: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 2.5em;
+}
+
+img {
+    width: 100%;
+    margin-top: .7em;
+}
+
+h3:first-of-type {
+    margin-top: 1.5em;
+}
+
+.portfoliolink {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    margin-top: 1em;
+    padding: 1em;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.gridkleur .portfoliolink:hover {
+    color: var(--vid-oranje);
+}
+
+.webtypografie .portfoliolink:hover {
+    color: var(--vid-blauw);
+}
+
+.interfaceinteractie .portfoliolink:hover {
+    color: var(--vid-roze);
+}
+
+.interfacebeweging .portfoliolink:hover {
+    color: var(--vid-paars);
+}
+
+.meesterproef .portfoliolink:hover {
+    color: var(--vid-donkergrijs);
+}
+
+/* Typografie */
+.typografie {
+    margin: 0 10em 0 10em;
+}
+
+.typografie-balk {
+    background-color: var(--vid-geel);
+}
+
+.typografie main p {
+    margin-top: .7em;
+}
+
+.typografie main > p:first-of-type {
+    margin-top: 2.5em;
+}
+
+
+
+/* grid & kleur */
+.gridkleur {
+    margin: 0 10em 0 10em;
+}
+
+.gridkleur-balk {
+    background-color: var(--vid-oranje);
+}
+
+.gridkleur main p {
+    margin-top: .7em;
+}
+
+.gridkleur main > p:first-of-type {
+    margin-top: 2.5em;
+}
+
+.gridkleur img {
+    border-bottom: 5px dashed black;
+}
+
+.gridkleur img:first-of-type {
+    border-bottom: none;
+}
+
+.gridkleur img:last-of-type {
+    border-bottom: none;
+}
+
+/* webtypografie */
+.webtypografie {
+    margin: 0 10em 0 10em;
+}
+
+.webtypografie-balk {
+    background-color: var(--vid-blauw);
+}
+
+.webtypografie main p {
+    margin-top: .7em;
+}
+
+.webtypografie main > p:first-of-type {
+    margin-top: 2.5em;
+}
+
+/* interface & interactie */
+.interfaceinteractie {
+    margin: 0 10em 0 10em;
+}
+
+.interfaceinteractie-balk {
+    background-color: var(--vid-roze);
+}
+
+.interfaceinteractie main p {
+    margin-top: .7em;
+}
+
+.interfaceinteractie main > p:first-of-type {
+    margin-top: 2.5em;
+}
+
+/* beeldtaal */
+.beeldtaal {
+    margin: 0 10em 0 10em;
+}
+
+.beeldtaal-balk {
+    background-color: var(--vid-groen);
+}
+
+.beeldtaal main p {
+    margin-top: .7em;
+}
+
+.beeldtaal main > p:first-of-type {
+    margin-top: 2.5em;
+}
+
+/* interface & beweging */
+.interfacebeweging {
+    margin: 0 10em 0 10em;
+}
+
+.interfacebeweging-balk {
+    background-color: var(--vid-paars);
+}
+
+.interfacebeweging main p {
+    margin-top: .7em;
+}
+
+.interfacebeweging main > p:first-of-type {
+    margin-top: 2.5em;
+}
+
+/* meesterproef */
+.meesterproef {
+    margin: 0 10em 0 10em;
+}
+
+.meesterproef-balk {
+    background-color: var(--vid-donkergrijs);
+}
+
+.meesterproef main p {
+    margin-top: .7em;
+}
+
+.meesterproef main > p:first-of-type {
+    margin-top: 2.5em;
+}
